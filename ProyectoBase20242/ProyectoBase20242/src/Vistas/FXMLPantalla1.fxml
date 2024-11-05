@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="vboxUsuarios" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #e65816;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.FXMLPantalla1Controller">
+   <children>
+      <Pane prefHeight="412.0" prefWidth="580.0" style="-fx-background-color: f1efee;">
+         <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+         <children>
+            <Label layoutX="198.0" layoutY="26.0" text="Lista de Usuarios">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tbv_usuarios" layoutX="30.0" layoutY="84.0" onMouseClicked="#eventClicked" prefHeight="200.0" prefWidth="541.0">
+              <columns>
+                <TableColumn fx:id="col_id" prefWidth="45.0" text="Id" />
+                <TableColumn fx:id="col_nombre" prefWidth="173.0" text="Nombres" />
+                  <TableColumn fx:id="col_usuario" minWidth="7.0" prefWidth="154.0" text="Usuario" />
+                  <TableColumn fx:id="col_perfil" minWidth="7.0" prefWidth="108.0" text="Perfil" />
+                  <TableColumn fx:id="col_estado" prefWidth="56.0" text="Estado" />
+              </columns>
+            </TableView>
+            <Pane layoutX="7.0" layoutY="300.0" prefHeight="84.0" prefWidth="575.0" style="-fx-background-color: #e65816;">
+               <children>
+                  <Pane layoutX="9.0" layoutY="5.0" prefHeight="74.0" prefWidth="560.0" style="-fx-background-color: f1efee;">
+                     <children>
+                        <Button fx:id="btn_nuevo" contentDisplay="TOP" layoutX="388.0" layoutY="7.0" minWidth="53.0" mnemonicParsing="false" onAction="#acc_nuevo" prefHeight="61.0" prefWidth="72.0" style="-fx-background-color: #e65816;" text="Nuevo" textFill="#f8f5f5">
+                           <graphic>
+                              <ImageView fitHeight="27.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../logos/verificar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn_cancelar" contentDisplay="TOP" layoutX="471.0" layoutY="7.0" minWidth="53.0" mnemonicParsing="false" onAction="#acc_cancelar" prefHeight="61.0" prefWidth="72.0" style="-fx-background-color: #e65816;" text="Cancelar" textFill="#f5f2f2">
+                           <graphic>
+                              <ImageView fitHeight="27.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../logos/delete_16281719.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</VBox>
